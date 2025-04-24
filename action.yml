@@ -13,7 +13,7 @@ inputs:
     required: true
   slack-incoming-webhook-url:
     description: 'URL of Slack Incoming Webhook'
-    required: true
+    required: false
   message:
     description: 'Message'
     required: false
