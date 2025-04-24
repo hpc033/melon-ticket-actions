@@ -14,5 +14,5 @@ jobs:
           schedule-id: 100002
           seat-id: 1_0
           slack-incoming-webhook-url: ${{ secrets.TEST }}
-          message: 'Buy!!'
+          message: '有票了!!'
 
