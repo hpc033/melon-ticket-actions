@@ -12,5 +12,7 @@ jobs:
         with:
           product-id: 211159
           schedule-id: 20250523
-          seat-id: 1_1
+          seat-id: 1_0
+          slack-incoming-webhook-url: ${{ secrets.TEST }}
+          message: 'Buy!!'
 
