@@ -1,0 +1,17 @@
+name: mes
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Every 5 minutes
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check Tickets
+        uses: mooyoul/melon-ticket-actions@v1.1.0
+        with:
+          product-id: 211159
+          schedule-id: 20250523
+          seat-id: 1_0
+          slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          message: 'Buy!!'
