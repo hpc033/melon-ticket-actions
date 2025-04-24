@@ -1,7 +1,6 @@
 name: mes
 on:
-  schedule:
-    - cron: '*/2 * * * *' # Every 5 minutes
+  workflow_dispatch: {}
 jobs:
   job:
     runs-on: ubuntu-latest
