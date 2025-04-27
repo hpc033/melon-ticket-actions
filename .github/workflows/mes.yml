@@ -16,4 +16,4 @@ jobs:
           schedule-id: ${{ secrets.MELON_TICKET_SCHEDULE_ID }}
           seat-id: ${{ secrets.MELON_TICKET_SIT_ID }}  # 可选，若需指定座位区域则保留并替换为你的seat-id
           slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          message: 'NCT Dream 5月24日场次有票！速抢：https://global.melon-ticket.com/product/211217'
+          message: '场次有票！速抢：https://global.melon-ticket.com/product/211217'
