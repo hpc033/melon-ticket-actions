@@ -17,7 +17,7 @@ inputs:
   message:
     description: 'Message'
     required: false
-    default: '티켓사세요'
+    default: '买票'
 runs:
   using: 'docker'
   image: 'Dockerfile'
