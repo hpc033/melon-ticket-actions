@@ -41,6 +41,7 @@ import * as qs from "querystring";
     "Referer": `https://ticket.melon.com/performance/index.htm?prodId=${productId}`,
     "X-Requested-With": "XMLHttpRequest",
     "Connection": "keep-alive",
+    "Origin": "https://ticket.melon.com",
   },
 });
 
