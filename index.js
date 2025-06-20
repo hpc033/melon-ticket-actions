@@ -39,6 +39,7 @@ const qs = require("querystring");
     console.log("Got response: ", res.data);
     if (res.data.chkResult) {
         const link = `https://tkglobal.melon.com/performance/index.htm?${qs.stringify({
+            langCd: "EN",
             prodId: productId,
         })}`;
         await webhook.send(`${message} ${link}`);
