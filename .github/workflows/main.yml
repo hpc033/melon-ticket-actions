@@ -1,6 +1,6 @@
 name: workflow
 on:
-  push
+  push:
 
   
 jobs:
