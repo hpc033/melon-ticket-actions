@@ -1,6 +1,6 @@
 name: workflow
 on:
-  workflow_dispatch:
+  push
 
   
 jobs:
