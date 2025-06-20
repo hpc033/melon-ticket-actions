@@ -43,6 +43,7 @@ import * as qs from "querystring";
 
   if (res.data.chkResult) {
     const link = `http://ticket.melon.com/performance/index.htm?${qs.stringify({
+      langCd: "EN",
       prodId: productId,
     })}`;
 
