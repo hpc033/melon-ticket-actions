@@ -24,27 +24,25 @@ import * as qs from "querystring";
   const webhook = new IncomingWebhook(webhookUrl);
 
   const res = await axios({
-    method: "POST",
-    url: "https://ticket.melon.com/tktapi/product/seatStateInfo.json",
-    params: {
-      v: "1",
-    },
-    data: qs.stringify({
-      prodId: productId,
-      scheduleNo: scheduleId,
-      seatId,
-      volume: 1,
-      selectedGradeVolume: 1,
-    }),
-    headers: {
-  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
-  "Accept": "application/json, text/plain, */*",
-  "Accept-Language": "en-US,en;q=0.9",
-  "Referer": `https://tkglobal.melon.com/performance/index.htm?langCd=EN&prodId=${productId}`,
-  "Origin": "https://tkglobal.melon.com",
-  "Connection": "keep-alive",
-},
-  });
+  method: "GET",
+  url: "https://ticket.melon.com/tktapi/product/seatStateInfo.json",
+  params: {
+    v: "1",
+    prodId: productId,
+    scheduleNo: scheduleId,
+    seatId,
+    volume: 1,
+    selectedGradeVolume: 1,
+  },
+  headers: {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0",
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Referer": `https://ticket.melon.com/performance/index.htm?prodId=${productId}`,
+    "X-Requested-With": "XMLHttpRequest",
+    "Connection": "keep-alive",
+  },
+});
 
   // tslint:disable-next-line
   console.log("Got response: ", res.data);
