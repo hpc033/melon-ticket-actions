@@ -3,7 +3,6 @@ name: getticket
 on:
   workflow_dispatch:
 
-
 jobs:
   job:
     runs-on: ubuntu-latest
@@ -15,5 +14,18 @@ jobs:
           product-id: 204755
           schedule-id: 100001
           seat-id: 1_0
-          slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          message: '<@U12345678> 달려달려~'
+        id: checkticket
+
+      - name: Send email notification
+        if: success()  # 你可以根据需要改成有票时才发送，比如用 checkticket 的输出判断
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.qq.com
+          server_port: 465
+          username: ${{ secrets.QQ_EMAIL_USER }}
+          password: ${{ secrets.QQ_EMAIL_PASS }}
+          subject: '票务通知'
+          to: '你的qq邮箱@qq.com'
+          from: '你的qq邮箱@qq.com'
+          body: '检测到有票啦，快去抢！'
+          secure: true
