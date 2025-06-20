@@ -43,7 +43,7 @@ import * as qs from "querystring";
   "Referer": `https://tkglobal.melon.com/performance/index.htm?langCd=EN&prodId=${productId}`,
   "Origin": "https://tkglobal.melon.com",
   "Connection": "keep-alive",
-}，
+},
   });
 
   // tslint:disable-next-line
