@@ -42,7 +42,7 @@ import * as qs from "querystring";
         "Accept": "application/json, text/plain, */*",
         "Accept-Language": "en-US,en;q=0.9",
         "Origin": "https://ticket.melon.com",
-        "Referer": `https://ticket.melon.com/performance/index.htm?prodId=${productId}`,
+        "Referer": `https://tkglobal.melon.com/performance/index.htm?langCd=EN&prodId=211358`,
     }
   });
 
