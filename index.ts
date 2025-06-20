@@ -13,7 +13,7 @@ import * as qs from "querystring";
   ].map((name) => {
     const value = core.getInput(name);
     if (!value) {
-      throw new Error(melon-ticket-actions: Please set ${name} input parameter);
+      throw new Error(`melon-ticket-actions: Please set ${name} input parameter`);
     }
 
     return value;
@@ -42,11 +42,11 @@ import * as qs from "querystring";
   console.log("Got response: ", res.data);
 
   if (res.data.chkResult) {
-    const link = http://ticket.melon.com/performance/index.htm?${qs.stringify({
+    const link = `http://ticket.melon.com/performance/index.htm?${qs.stringify({
       prodId: productId,
-    })};
+    })}`;
 
-    await webhook.send(${message} ${link});
+    await webhook.send(`${message} ${link}`);
   }
 })().catch((e) => {
   console.error(e.stack); // tslint:disable-line
