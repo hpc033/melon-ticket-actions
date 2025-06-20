@@ -1,0 +1,14 @@
+name: Test Slack Webhook
+
+on:
+  workflow_dispatch:  # 手动触发
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send test message to Slack
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{"text":"✅ Slack Webhook 配置成功！来自 GitHub Actions 的测试消息"}' \
+          ${{ secrets.SLACK_WEBHOOK_URL }}
