@@ -2,8 +2,7 @@ name: Melon Ticket Checker
 
 on:
   workflow_dispatch: # 手动触发，方便测试
-  schedule:
-    - cron: "0 * * * *" # 每小时执行一次，可以调整
+
 
 jobs:
   check-ticket:
