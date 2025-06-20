@@ -38,7 +38,7 @@ const qs = require("querystring");
     // tslint:disable-next-line
     console.log("Got response: ", res.data);
     if (res.data.chkResult) {
-        const link = `https://tkglobal.melon.com/performance/index.htm?langCd=EN&${qs.stringify({
+        const link = `https://tkglobal.melon.com/performance/index.htm?${qs.stringify({
             prodId: productId,
         })}`;
         await webhook.send(`${message} ${link}`);
