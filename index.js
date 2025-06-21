@@ -19,6 +19,13 @@ const qs = require("querystring");
         }
         return value;
     });
+    console.log('Request params:', {
+  prodId: productId,
+  scheduleNo: scheduleId,
+  seatId,
+  volume: 1,
+  selectedGradeVolume: 1,
+});
     const message = (_a = core.getInput("message")) !== null && _a !== void 0 ? _a : "买票";
     const webhook = new webhook_1.IncomingWebhook(webhookUrl);
     const res = await axios_1.default({
@@ -48,3 +55,4 @@ const qs = require("querystring");
     console.error(e.stack); // tslint:disable-line
     core.setFailed(e.message);
 });
+
