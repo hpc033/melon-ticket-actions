@@ -25,7 +25,7 @@ import * as qs from "querystring";
 
   const res = await axios({
   method: "POST",
-  url: "https://ticket.melon.com/tktapi/product/seatStateInfo.json",
+  url: "https://tkglobal.melon.com/tktapi/product/seatStateInfo.json",
   params: {
     v: "1",
     prodId: productId,
@@ -38,7 +38,7 @@ import * as qs from "querystring";
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0",
     "Accept": "application/json, text/javascript, */*; q=0.01",
     "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
-    "Referer": `https://ticket.melon.com/performance/index.htm?prodId=${productId}`,
+    "Referer": `https://tkglobal.melon.com/performance/index.htm?prodId=${productId}`,
     "X-Requested-With": "XMLHttpRequest",
     "Connection": "keep-alive",
     "Origin": "https://ticket.melon.com",
@@ -49,7 +49,7 @@ import * as qs from "querystring";
   console.log("Got response: ", res.data);
 
   if (res.data.chkResult) {
-    const link = `http://ticket.melon.com/performance/index.htm?${qs.stringify({
+    const link = `http://tkglobal.melon.com/performance/index.htm?${qs.stringify({
       langCd: "EN",
       prodId: productId,
     })}`;
