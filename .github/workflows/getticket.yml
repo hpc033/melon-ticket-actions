@@ -9,7 +9,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Check Tickets
-        uses: ./
+        uses: ./melon-ticket-actions
         with:
           product-id: 211358
           schedule-id: 100001
