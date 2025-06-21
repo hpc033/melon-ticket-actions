@@ -3,14 +3,13 @@ name: getticket
 on:
   workflow_dispatch:
 
-
 jobs:
   job:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - name: Check Tickets
-        uses: mooyoul/melon-ticket-actions@v1.1.0
+        uses: ./
         with:
           product-id: 211358
           schedule-id: 100001
