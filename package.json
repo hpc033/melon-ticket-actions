@@ -36,6 +36,7 @@
     "tslint": "5.20.1",
     "typescript": "3.9.10"
   },
+  "type": {module},
   "dependencies": {
     "@actions/core": "^1.1.1",
     "@slack/webhook": "^5.0.2",
