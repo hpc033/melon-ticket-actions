@@ -41,6 +41,16 @@ const qs = require("querystring");
             volume: 1,
             selectedGradeVolume: 1,
         }),
+        headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0 Safari/537.36',
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json, text/javascript, */*; q=0.01',
+        'Origin': 'https://tkglobal.melon.com',
+        'Referer': `https://tkglobal.melon.com/performance/index.htm?${qs.stringify({
+            langCd: "EN",
+            prodId: productId,
+        })}`
+    },
     });
     // tslint:disable-next-line
     console.log("Got response: ", res.data);
