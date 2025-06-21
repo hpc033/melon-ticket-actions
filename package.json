@@ -11,14 +11,15 @@
     "type": "git",
     "url": "git+https://github.com/mooyoul/melon-ticket-actions.git"
   },
-  {
+
+},
+    {
   "type": "module",
   "dependencies": {
     "@actions/core": "...",
     "@slack/webhook": "...",
     "axios": "..."
   }
-},
   "keywords": [
     "github-actions",
     "typescript"
